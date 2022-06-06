@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html id="app" lang="en" dir="ltr" ng-csp="" ng-strict-di="" class="js-focus-visible ng-scope" data-js-focus-visible=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title ng-bind="(&#39;loginTitle&#39; | localize) + &#39; - Spotify&#39;" class="ng-binding">Login - Spotify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!--<base href="/">--><base href=".">
+  <link rel="icon" href="https://accounts.scdn.co/sso/images/favicon.ace4d8543bbb017893402a1e9d1ac1fa.ico">
+  <link href="./spotify_authentication_files/index.3ff124dfd72bdb0a5a3d.css" media="screen" rel="stylesheet">
+
+  <script type="text/javascript" async="" src="./spotify_authentication_files/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-b3tGrrJFQIPZurcFNV2vrA2u2er9PWPAKHNcMEptlkLhk70c4ZdB0G3jp+CLqqAB"></script><script defer="" src="./spotify_authentication_files/index.3ff124dfd72bdb0a5a3d.js" sp-bootstrap=""></script>
+  <meta ng-non-bindable="" sp-bootstrap-data="{&quot;phoneFeatureEnabled&quot;:true,&quot;previewEnabled&quot;:false,&quot;user&quot;:false,&quot;tpaState&quot;:&quot;AQA2CG0K6UhashYchEZxmMldclRtkv9kSF2U9+C87DTn5Dzoi7GbeP7t+fx6xauoqTTUXQtvBs4xh45tCSFIALiOk3BnZTIgTqcw+FRgkQL2fCymnNI776QBwSJOhQioXQ53vsKUWdwALUy6R1mZFRLCKEsD5NhEhethCSWHcU1RK96c5uOJxDTCttlC31Df3Ci4BAGEu9VzSUmK0GQS+AImxILudFz21fgCSwOwbQ1ZvYFTG7owcD2lkMIYUd5Mf1756jmi+oMmDRTrl0nhYp1OgHYSbiYdY4wimdl1qsysdN9y9Zimqzbm8y7kNrWQeM2/PAvGQNtbY4OczfSvKeFqjOnAt/g4WcATAejkXYqrgypgckgqB5nrEpY1RBboNkjoBuZ37jgSglmGPm3tqe2UyMekYAkDvxY8B7NBDkLfP6LBpo+8Yjl20V6LZqpoGAAaCVdFVfYBLRiLwQjhn76TN6v98xo783dfo05jzyeuHS2Oa3cw3RMye+LvCGL+BfsOtxVbuYpzhj+co1sxedLNBJdkpaW66n3w5BbzEYo2nNC93n8+VEsTUSJIZftoq6QtiC5pNTLdkfhLtsoCRMBX6sn32YP1W0jnRAMvDSaFbvjI2kVC&quot;,&quot;BON&quot;:[&quot;0&quot;,&quot;0&quot;,-211523731]}">
+<script charset="utf-8" src="./spotify_authentication_files/0.b33c7c497a029e96e60d.js"></script><script charset="utf-8" src="./spotify_authentication_files/1.fad49d9d94d462fd19af.js"></script><script charset="utf-8" src="./spotify_authentication_files/2.335646aa1f59d288e05f.js"></script></head>
+<body ng-controller="LoginController" class="ng-scope">
+  <!-- ngInclude: template --><div ng-include="template" class="ng-scope"><div sp-header="" class="ng-scope"><div class="head ">
+  <a class="spotify-logo" tabindex="-1" title="Spotify" ng-href="/en" href="https://accounts.spotify.com/en"></a>
+</div>
+</div>
+
+<div class="container-fluid login ng-scope">
+  <recaptcha><script src="./spotify_authentication_files/enterprise.js" async="true"></script></recaptcha>
+  <div class="content">
+    <!-- ngIf: showContinueLabel --><div class="row ng-scope" ng-if="showContinueLabel">
+          <div class="col-xs-12 text-center">
+              <h1 id="login-to-continue" class="h5 ng-binding">To continue, log in to Spotify.</h1>
+          </div>
+    </div><!-- end ngIf: showContinueLabel -->
+    <!-- ngIf: status && status !== 200 -->
+    <!-- ngIf: !onlyPasswordView --><div ng-if="!onlyPasswordView" class="ng-scope">
+      <div class="row">
+        <div class="col-xs-12">
+        <!--
+          
+        </div>
+      </div>
+      -->
+      <div class="row">
+        <div class="col-xs-12">
+   
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          
+        </div>
+      </div>
+      <!-- ngIf: phoneBtnEnabled --><div class="row ng-scope" ng-if="phoneBtnEnabled">
+        <div class="col-xs-12">
+          
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="divider">
+            <strong class="divider-title ng-binding">or</strong>
+          </div>
+        </div>
+      </div>
+    </div><!-- end ngIf: !onlyPasswordView -->
+
+    <form name="$parent.accounts" method="post" novalidate="" class="ng-pristine ng-valid-sp-disallow-chars ng-invalid ng-invalid-required">
+
+      <div class="row" ng-class="{&#39;has-error&#39;: (accounts.username.$dirty &amp;&amp; accounts.username.$invalid) || invalidCredentials}">
+        <div class="col-xs-12">
+          <label for="login-username" class="control-label ng-binding">
+            Email address or username
+          </label>
+          <input ng-model="form.username" type="text" class="form-control input-with-feedback ng-pristine ng-valid-sp-disallow-chars ng-empty ng-invalid ng-invalid-required ng-touched" name="username" id="login-username" placeholder="Email address or username" required="" sp-disallow-chars=":&amp;&#39;`´&quot;" sp-disallow-chars-model="usernameDisallowedChars" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="autofocus" ng-trim="false" ng-change="onInputChange()">
+          <!-- ngIf: accounts.username.$dirty && accounts.username.$invalid -->
+        </div>
+      </div>
+
+      <div class="row" ng-class="{&#39;has-error&#39;: (accounts.password.$dirty &amp;&amp; accounts.password.$invalid) || invalidCredentials}">
+        <div class="col-xs-12">
+          <label for="login-password" class="control-label ng-binding">
+            Password
+          </label>
+          <input ng-model="form.password" type="password" class="form-control input-with-feedback ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="password" id="login-password" placeholder="Password" required="" autocomplete="off" ng-trim="false" ng-change="onInputChange()">
+          <!-- ngIf: accounts.password.$dirty && accounts.password.$invalid -->
+        </div>
+      </div>
+
+      <!-- ngIf: showAutomationKey -->
+
+          <div class="row password-reset">
+            <div class="col-xs-12">
+              <p>
+                <a id="reset-password-link" ng-href="https://www.spotify.com/password-reset/" analytics-on="click" analytics-category="Login View" analytics-event="Forgot Button" analytics-label="b41df1ef66cb4807a6a5d368e2b87233" class="ng-binding" href="https://www.spotify.com/password-reset/">Forgot your password?</a>
+              </p>
+            </div>
+          </div>
+
+      <div class="row row-submit">
+        <div class="col-xs-12 col-sm-6">
+          <div class="checkbox">
+            <label class="ng-binding">
+              <input ng-model="form.remember" type="checkbox" name="remember" analytics-on="checked" analytics-category="Login View" id="login-remember" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+              Remember me
+              <span class="control-indicator"></span>
+            </label>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <button class="btn btn-block btn-green ng-binding" id="login-button" ng-click="onLoginClick($event)">Log In</button>
+        </div>
+      </div>
+    </form>
+
+    <div id="sign-up-section">
+      <div class="row">
+        <div class="col-xs-12">
+          <signup class="ng-isolate-scope"><!-- ngIf: showSignup --><div ng-if="showSignup" class="ng-scope">
+    <!-- ngIf: showButton --><div ng-if="showButton" class="ng-scope">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="divider">
+                    <!-- ngIf: showOrLabel -->
+                </div>
+            </div>
+        </div>
+        <div class="row text-center mt-0">
+            <h2 class="h4 ng-binding">Don't have an account?</h2>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <a id="sign-up-link" ng-click="onSignupClick()" ng-href="/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fauthorize%3Fscope%3Duser-read-private%2Buser-read-playback-state%2Buser-modify-playback-state%2Buser-library-read%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fspotify-sentiment-analysis.herokuapp.com%252Fspotify_sentiment_analysis%26client_id%3Db41df1ef66cb4807a6a5d368e2b87233%26show_dialog%3DTrue" class="btn btn-block btn-default ng-binding" role="button" href="https://accounts.spotify.com/en/login/signup?continue=https%3A%2F%2Faccounts.spotify.com%2Fauthorize%3Fscope%3Duser-read-private%2Buser-read-playback-state%2Buser-modify-playback-state%2Buser-library-read%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fspotify-sentiment-analysis.herokuapp.com%252Fspotify_sentiment_analysis%26client_id%3Db41df1ef66cb4807a6a5d368e2b87233%26show_dialog%3DTrue">Sign up for Spotify</a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end ngIf: showButton -->
+
+    <!-- ngIf: showAppStoreBanner -->
+</div><!-- end ngIf: showSignup -->
+</signup>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- .content -->
+</div><!-- .container -->
+</div>
+
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" src="./spotify_authentication_files/anchor.html" width="256" height="60" role="presentation" name="a-3jjk95pyzmqf" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./spotify_authentication_files/saved_resource.html"></iframe></div></body></html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='images/spotify-icon.png') }}">
+    <title>Spotify Sentiment Analysis</title>
+</head>
+<body>
+    <header id="main-header" class="px-5 bg-dark">
+        <div class="container">
+            <nav class="navbar justify-content-end px-4">
+                <a class="nav-link text-white fs-5 navbar-brand m-0" href="#">
+                    <img src="{{ profile_picture }}" class="rounded-circle d-inline-block align-text-top" id="user-image" style="background-blend-mode: overlay;">
+                    Profile
+                </a>
+                <p class="navbar-text text-white mb-0 fs-5">|</p>
+                <a class="nav-link text-white fs-5" href="#">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <section id="main-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h1 class="col-6 display-3 text-left m-0">SENTIMENT ANALYSIS OF YOUR FAVOURITE SONG ON SPOTIFY</h1>
+                
+                
+                
+                <div class="col-6  p-3 m-0 text-center">
+                    <img src="{{ url_for('static',filename='images/senti.png') }}" style="width:400px;height:300px;">
+                </div>
+            </div>
+            <div class Song title>
+                <h2>Your Favourite song:</h2>
+                <img src=""{{ album_art }}>
+                {{ track_name }} by 
+                {{ artist }}
+            </div>
+            <div class net sentiment>
+                <h2>Net sentiment of your favourite song:</h2>
+                {% for your_list_element in sentiment_list %}
+                    <p>{{ sentiment_list }} </p>
+                {% endfor %}
+            </div>
+            <div Sentiment Percentage>
+                <h2>Net sentiment percentange of your favourite song:</h2>
+                {% for your_list_element in sentiment_score_list %}
+                    <p>{{ sentiment_score_list }} </p>
+                {% endfor %}
+                
+            </div>
+            
+            <div lyrics snippet>
+
+                <h2>Lyrics snippet:</h2>
+               
+                    <p>{{ test_lyric }} </p>
+                
+            </div>
+            
+        </div>
+    </section>
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>

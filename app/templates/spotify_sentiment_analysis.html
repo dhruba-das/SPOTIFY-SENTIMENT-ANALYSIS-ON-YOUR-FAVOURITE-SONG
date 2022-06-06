@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='images/spotify-icon.png') }}">
+    <title>Home- Spotify Sentiment Analysis</title>
+</head>
+
+<body>
+  
+<header id="home-header" class="px-5 bg-dark">
+        <div class="container">
+            <nav class="navbar justify-content-center px-20">
+                <p class="navbar-text text-white">Spotify Sentiment Analysis</p>
+            </nav>
+        </div>
+</header>
+  <main>
+    <section id="main-section">
+      <div class="container">
+        <h1>Spotify Sentiment Analysis</h1>
+        <br>
+        <p>Learn more about the sentiment of your favourite tracks.</p>
+        <p>To access these values, we use the <a href="https://developer.spotify.com/web-api/">Spotify API</a>.</p>
+        <p>We do not store any of your personal information (e.g. how you 
+            pay for your Spotify). But to limit the number of API calls we make, we 
+            securely store the name and the 
+            artist of your favourite songs, as well as your Spotify user ID.</p>
+        <br>
+        <p>For this analysis, <b>you need to have songs in your liked playlist.</b></p>
+        <h4>Log in to check out the sentiment of your tracks.</h4>
+        <br>
+        <a href="/spotify_sentiment_analysis_login" class="btn btn-sm btn-primary">Log In With Spotify</a>
+        </div>
+    </section>
+    <footer id="home-footer" class="px-5 bg-dark">
+      <div class="container">
+          <nav class="navbar justify-content-center px-20">
+              <p class="navbar-text text-white">A project created by Dhruba Das, KIIT University</p>
+          </nav>
+      </div>
+    </footer>
+  </main>
+  
+
+
+
+
+
+
+
+
+</body></html>
